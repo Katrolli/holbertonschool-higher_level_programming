@@ -4,6 +4,8 @@ def best_score(a_dictionary):
         return None
     max = 0
     values = list(a_dictionary.values())
+    if len(values) == 0:
+        return None
     for i, nr in enumerate(values):
         if nr > max:
             max = nr
