@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-
 '''function that prints a square of size "size"'''
+
 
 def print_square(size):
     ''' checking possibile cases'''
