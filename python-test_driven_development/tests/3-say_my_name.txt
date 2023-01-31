@@ -25,3 +25,8 @@ Function will print the two arguments as first and last name
 
 	>>> say_my_name('Monty', 'Python')
 	My name is Monty Python
+
+blah
+	>>> say_my_name()
+	Traceback (most recent call last):
+	TypeError: say_my_name() missing 1 required positional argument: 'first_name'
