@@ -1,0 +1,34 @@
+Module 2-matrix_divided.py
+
+def matrix_divided(matrix,div) divides each element of the matrix by value of "div"
+
+	>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Works with matrix and positive div
+
+	>>> matrix_divided([[1, 2, 3], [4 , 5, 6]], 3)
+	[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+Div variable cannot be 0
+
+	>>> matrix_divided([[1, 2, 3], [4 , 5, 6]], 0)
+	Traceback (most recent call last):
+	ZeroDivisionError: division by zero
+
+Div variable must be an int or float
+	
+	>>> matrix_divided([[1, 2, 3], [4 , 5, 6]], "Tatarusanu")
+	Traceback (most recent call last):
+	TypeError: div must be a number
+
+Length of all rows in matrix must be the same
+
+	>>> matrix_divided([[1, 2, 3], [4 , 5, 6, 7]], 3)
+	Traceback (most recent call last):
+	TypeError: Each row of the matrix must have the same size
+
+Matrix must be a list of lists of integers and floats
+
+	>>> matrix_divided([[1, 'tata', 3], [4 , 5, 6, 7]], 3)
+        Traceback (most recent call last):
+        TypeError: matrix must be a matrix (list of lists) of integers/floats
