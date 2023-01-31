@@ -31,3 +31,9 @@ inf test
 
 	>>> matrix_divided([[1, 2, 3], [4 , 5, 6]], float('inf'))
 	[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
+Elements of matrix cannot be other than int or float
+
+	>>> matrix_divided([1, 2, 'hi'],[4, 5, 6], 3)
+	Traceback (most recent call last):
+        TypeError: matrix must be a matrix (list of lists) of integers/floats
