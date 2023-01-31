@@ -27,8 +27,7 @@ Length of all rows in matrix must be the same
 	Traceback (most recent call last):
 	TypeError: Each row of the matrix must have the same size
 
-Matrix must be a list of lists of integers and floats
+inf test
 
-	>>> matrix_divided([[1, 'tata', 3], [4 , 5, 6, 7]], 3)
-        Traceback (most recent call last):
-        TypeError: matrix must be a matrix (list of lists) of integers/floats
+	>>> matrix_divided([[1, 2, 3], [4 , 5, 6]], float('inf'))
+	[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
