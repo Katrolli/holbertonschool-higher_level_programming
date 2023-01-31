@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+''' function that adds 2 ints'''
+
+
 def add_integer(a, b=98):
+    ''' function that adds 2 ints, checks possibile fail cases'''
     if type(a) not in [int, float]:
         raise TypeError("a must be an integer")
     if type(b) not in [int, float]:
