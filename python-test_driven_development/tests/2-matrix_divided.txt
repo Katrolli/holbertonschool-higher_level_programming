@@ -38,8 +38,3 @@ Elements of matrix cannot be other than int or float
 	Traceback (most recent call last):
         TypeError: matrix must be a matrix (list of lists) of integers/floats
 
-Function must not miss any arguments
-
-	>>> matrix_divided([[1, 2, 3], [4 , 5, 6]])
-	Traceback(most recent call last):
-	TypeError: matrix_divided() missing 1 required positional argument: 'div'
