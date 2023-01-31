@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+''' function that prints formated text'''
+
+
 def text_indentation(text):
+    ''' checking possibile cases'''
     if type(text) is not str:
         raise TypeError("text must be a string")
     i = 0

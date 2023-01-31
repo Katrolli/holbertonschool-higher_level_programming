@@ -29,3 +29,9 @@ Even when there are lots of spaces
 	Me thua dot sa eshte ora?
 	<BLANKLINE>
 	9
+
+If function is missing argument
+
+	>>> text_indentation()
+	Traceback (most recent call last):
+	TypeError: text_indentation() missing 1 required positional argument: 'text'
