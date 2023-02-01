@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-Module of Rectangle
 ''' module with a rectangel class'''
 
 
