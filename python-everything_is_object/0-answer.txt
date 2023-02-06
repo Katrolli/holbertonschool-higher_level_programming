@@ -1,2 +1,2 @@
-def type_of object : print type object
+type
 
