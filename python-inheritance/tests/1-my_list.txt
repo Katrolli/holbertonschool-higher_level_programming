@@ -1,0 +1,66 @@
+Module 1-MyList
+
+Importing MyList class:
+
+	>>> MyList = __import__('1-my_list').MyList
+
+Can be initialized with no args
+
+	>>> my_list = MyList()
+	>>> type(my_list)
+	<class '1-my_list.MyList'>
+
+	>>> print(my_list)
+	[]
+
+	>>> my_list = MyList()
+	>>> my_list.print_sorted()
+	[]
+
+With elements:
+
+	>>> my_list = MyList([3, 1, 2])
+	>>> print(my_list)
+	[3, 1, 2]
+	>>> my_list.print_sorted()
+	[1, 2, 3]
+
+Negative numbers as well:
+
+	>>> my_list = MyList([-3, 2, 1])
+	>>> my_list.print_sorted()
+	[-3, 1, 2]
+
+Works with strings:
+
+	>>> my_list = MyList(["fabio", 'ennio', 'xhulian'])
+	>>> my_list.print_sorted()
+	['ennio', 'fabio', 'xhulian']
+
+Does not work if list is None:
+
+	>>> my_list = MyList(None)
+	>>> my_list.print_sorted()
+	Traceback (most recent call last):
+	TypeError: 'NoneType' object is not iterable
+
+Inherits from list class:
+
+	>>> my_list = MyList([5, 8, 2])
+	>>> my_list.append(4)
+	>>> my_list.print_sorted()
+	[2, 4, 5, 8]
+
+Does not work with different types:
+
+	>>> my_list = MyList(['pasterma', 8, 2])
+	>>> my_list.append(4)
+	>>> my_list.print_sorted()
+
+Is a subclass of list:
+
+	>>> my_list = MyList([5, 8, 2])
+	>>> issubclass(list, MyList)
+	False
+	>>> issubclass(MyList, list)
+	True
