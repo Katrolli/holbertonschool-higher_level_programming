@@ -40,7 +40,6 @@ Works with strings:
 Does not work if list is None:
 
 	>>> my_list = MyList(None)
-	>>> my_list.print_sorted()
 	Traceback (most recent call last):
 	TypeError: 'NoneType' object is not iterable
 
@@ -54,8 +53,9 @@ Inherits from list class:
 Does not work with different types:
 
 	>>> my_list = MyList(['pasterma', 8, 2])
-	>>> my_list.append(4)
 	>>> my_list.print_sorted()
+	Traceback (most recent call last):
+	TypeError: '<' not supported between instances of 'int' and 'str'
 
 Is a subclass of list:
 
