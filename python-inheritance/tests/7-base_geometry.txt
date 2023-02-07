@@ -41,3 +41,35 @@ Error cases:
         >>> bg.integer_validator("name", 72.5)
         Traceback (most recent call last):
         TypeError: name must be an integer
+
+
+	>>> bg = BaseGeometry()
+	>>> bg.area()
+	Traceback (most recent call last):
+	Exception: area() is not implemented
+
+	>>> bg = BaseGeometry()
+	>>> bg.area(1)
+	Traceback (most recent call last):
+	TypeError: area() takes 1 positional argument but 2 were given
+
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("name", (2,))
+	Traceback (most recent call last):
+	TypeError: name must be an integer
+
+	>>> bg = BaseGeometry()
+        >>> bg.integer_validator("name", True)
+        Traceback (most recent call last):
+        TypeError: name must be an integer
+
+	>>> bg = BaseGeometry()
+        >>> bg.integer_validator("name", [3])
+        Traceback (most recent call last):
+        TypeError: name must be an integer
+
+
+	>>> bg = BaseGeometry()
+        >>> bg.integer_validator("name", {3, 4})
+        Traceback (most recent call last):
+        TypeError: name must be an integer
