@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+'''Module'''
+
 
 def class_to_json(obj):
     '''Function that retuns new dict based on obj values'''
