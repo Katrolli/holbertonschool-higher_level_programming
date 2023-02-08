@@ -28,4 +28,5 @@ with open('add_item.json', 'r', encoding="utf-8") as a_file:
         if item not in my_list:
             my_list.append(item)
 
-new_list = load_from_json_file(file_path)
+save_to_json_file(my_list, filename)
+new_list = load_from_json_file(filename)
