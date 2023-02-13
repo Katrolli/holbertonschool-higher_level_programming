@@ -2,10 +2,23 @@
 '''Module of Rectangle class'''
 from models.base import Base
 
+
+def error_raise(**kwargs):
+    '''Function that handles error raising'''
+    for key, value in kwargs.items():
+        if type(value) is not int:
+            raise TypeError("{} must be an integer".format(key))
+        if key in ["width", "height"] and value <= 0:
+            raise ValueError("{} must be > 0".format(key))
+        if key in ["x", "y"] and value < 0:
+            raise ValueError("{} must be >= 0".format(key))
+
+
 class Rectangle(Base):
     '''Rectangle class inherits from Base'''
     def __init__(self, width, height, x=0, y=0, id=None):
         Base.__init__(self, id)
+        error_raise(width=width, height=height, x=x, y=y)
         self.__width = width
         self.__height = height
         self.__x = x
@@ -17,6 +30,7 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, width):
+        error_raise(width=width)
         self.__width = width
 
     @property
@@ -25,6 +39,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, height):
+        error_raise(height=height)
         self.__height = height
 
     @property
@@ -33,6 +48,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, x):
+        error_raise(x=x)
         self.__x = x
 
     @property
@@ -41,4 +57,5 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, y):
+        error_raise(y=y)
         self.__y = y
