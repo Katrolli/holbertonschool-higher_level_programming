@@ -24,7 +24,8 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-         new_list = []
+        '''tst'''
+        new_list = []
         new_file = cls.__name__ + ".json"
         if list_objs is not None:
             for el in list_objs:
