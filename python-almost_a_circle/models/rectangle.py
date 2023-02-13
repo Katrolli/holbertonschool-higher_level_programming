@@ -84,3 +84,11 @@ class Rectangle(Base):
         rep += " - "
         rep += "{}/{}".format(self.__width, self.__height)
         return rep
+
+    def update(self, *args):
+        '''Update values of obj'''
+        ls = []
+        for i in self.__dict__.keys():
+            ls.append(i)
+        for i in range(len(args)):
+            self.__dict__[ls[i]] = args[i]
