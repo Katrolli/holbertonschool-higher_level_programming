@@ -85,10 +85,20 @@ class Rectangle(Base):
         rep += "{}/{}".format(self.__width, self.__height)
         return rep
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         '''Update values of obj'''
         ls = []
         for i in self.__dict__.keys():
             ls.append(i)
-        for i in range(len(args)):
-            self.__dict__[ls[i]] = args[i]
+        if len(args) != 0:
+            for i in self.__dict__.keys():
+                ls.append(i)
+            for i in range(len(args)):
+                self.__dict__[ls[i]] = args[i]
+        else:
+            for key, value in kwargs.item():
+                for attr in ls:
+                    if key == 'id':
+                        self.__dict__[key] = value
+                    elif key != 'id' and key in attr:
+                        self.__dict[attr] = value
