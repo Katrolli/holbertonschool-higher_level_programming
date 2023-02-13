@@ -78,5 +78,5 @@ class Rectangle(Base):
         rep += " ({})".format(self.id)
         rep += " {}/{}".format(self.__x, self.__y)
         rep += " - "
-        rep += "{}{}".format(self.__width, self.__height)
+        rep += "{}/{}".format(self.__width, self.__height)
         return rep
