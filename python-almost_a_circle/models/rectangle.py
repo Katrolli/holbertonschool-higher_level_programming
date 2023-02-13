@@ -63,3 +63,11 @@ class Rectangle(Base):
     def area(self):
         '''module that returns the area of obj'''
         return self.__width * self.__height
+
+    def display(self):
+        '''module that prints height and width'''
+        for i in range(self.__height):
+            for j in range(self.__width):
+                if j != self.__width - 1:
+                    print("#", end="")
+            print("#")
