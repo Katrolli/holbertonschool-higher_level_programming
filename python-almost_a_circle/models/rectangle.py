@@ -102,3 +102,11 @@ class Rectangle(Base):
                         self.__dict__[key] = value
                     elif key != 'id' and key in attr:
                         self.__dict__[attr] = value
+
+    def to_dictionary(self):
+        '''Obj to dict repr'''
+        ls = ["id", "width", "height", "x", "y"]
+        tmp = {}
+        for item in ls:
+            tmp[item] = getattr(self, item)
+        return tmp
