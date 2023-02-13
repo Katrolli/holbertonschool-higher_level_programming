@@ -32,3 +32,11 @@ class Base:
                 ls.append(item.to_dictionary())
         with open(file_name, "w", encoding="utf-8") as n_file:
             n_file.write(cls.to_json_string(ls))
+
+    @staticmethod
+    def from_json_string(json_string):
+        '''json to obj'''
+        if json_string is None or json_string is []:
+            return []
+        else:
+            return json.loads(json_string)
