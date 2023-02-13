@@ -71,3 +71,12 @@ class Rectangle(Base):
                 if j != self.__width - 1:
                     print("#", end="")
             print("#")
+
+    def __str__(self):
+        '''Change the represtantion of str'''
+        rep = "[Rectangle]"
+        rep += " ({})".format(self.id)
+        rep += " {}/{}".format(self.__x, self.__y)
+        rep += " - "
+        rep += "{}{}".format(self.__width, self.__height)
+        return rep
