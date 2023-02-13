@@ -96,9 +96,9 @@ class Rectangle(Base):
             for i in range(len(args)):
                 self.__dict__[ls[i]] = args[i]
         else:
-            for key, value in kwargs.item():
+            for key, value in kwargs.items():
                 for attr in ls:
                     if key == 'id':
                         self.__dict__[key] = value
                     elif key != 'id' and key in attr:
-                        self.__dict[attr] = value
+                        self.__dict__[attr] = value
