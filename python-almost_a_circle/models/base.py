@@ -40,3 +40,10 @@ class Base:
             return []
         else:
             return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        '''Create new instance'''
+        dummy_inst = cls(3, 2)
+        dummy_inst.update(**dictionary)
+        return dummy_inst
