@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+'''append func'''
+
+
 def append_after(filename="", search_string="", new_string=""):
     '''Search file and add line'''
     with open(filename, 'r') as file:
