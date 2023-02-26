@@ -6,7 +6,17 @@ import sys
 tot = 0
 count = 0
 code_list = []
-for i, line in enumerate(sys.stdin):
+code_d = {
+    "200": 0,
+    "301": 0,
+    "400": 0,
+    "401": 0,
+    "403": 0,
+    "404": 0,
+    "405": 0,
+    "500": 0
+}
+for line in sys.stdin:
     ls = line.split()
     size = int(ls[len(ls) - 1])
     s_code = ls[len(ls) - 2]
@@ -17,5 +27,7 @@ for i, line in enumerate(sys.stdin):
         print("Filesize: {}".format(tot))
         count = 0
     elif count != 10:
-        print("{}: {}".format(code_list[count], i))
-        count += 1
+        if s_code in code_d:
+            code_d[s_code] += 1
+            print("{}: {}".format(code_list[count], code_d[s_code]))
+            count += 1
