@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """Script that computes data"""
 import sys
-import signal
-import traceback
+
 
 tot = 0
 count = 0
