@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-"""Script that computes data"""
+'''Module that computes data'''
 import sys
-"""Script that computes data"""
 
 
 tot = 0
