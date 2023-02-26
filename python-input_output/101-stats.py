@@ -23,11 +23,13 @@ for line in sys.stdin:
     tot += size
     code_list.append(s_code)
     code_list.sort()
-    if count == 10:
+    if count == 10 or count == 0:
         print("Filesize: {}".format(tot))
-        count = 0
-    elif count != 10:
+        count += 1
+    elif count in range(1, 10):
         if s_code in code_d:
             code_d[s_code] += 1
             print("{}: {}".format(code_list[count], code_d[s_code]))
             count += 1
+            if count >= 10:
+                count = 0
