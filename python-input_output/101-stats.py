@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"Script that computes data"
+"""Script that computes data"""
 import sys
 import signal
 import traceback
