@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Script that computes data"""
 import sys
+"""Script that computes data"""
 
 
 tot = 0
@@ -18,8 +19,6 @@ code_d = {
 }
 i = 0
 j = 0
-
-
 try:
     while True:
         i = 0
