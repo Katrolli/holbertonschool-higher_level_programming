@@ -9,7 +9,11 @@ if __name__ == '__main__':
                          user=sys.argv[1], password=sys.argv[2],
                          db=sys.argv[3], charset='utf8')
     cr = db.cursor()
-    cr.execute("SELECT cities.id, cities.name, states.name FROM cities JOIN states ON states.id = cities.state_id")
+    query = " ".join([
+        "SELECT cities.id, cities.name, states.name",
+        "FROM cities JOIN states ON states.id = cities.state_id"
+        ])
+    cr.execute(query)
     cities = cr.fetchall()
     for city in cities:
         print(city)
