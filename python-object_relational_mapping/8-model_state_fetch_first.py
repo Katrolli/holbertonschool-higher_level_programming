@@ -15,7 +15,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    query = session.query(State.id, State.name).filter(State.id==1)
+    query = session.query(State.id, State.name).filter(State.id == 1)
     if not query.count():
         print("Nothing")
     else:
