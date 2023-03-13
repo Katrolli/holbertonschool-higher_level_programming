@@ -9,7 +9,7 @@ if __name__ == '__main__':
                          user=sys.argv[1], password=sys.argv[2],
                          db=sys.argv[3], charset='utf8')
     cr = db.cursor()
-    cr.execute("SELECT * from states WHERE states.name = '{}'"
+    cr.execute("SELECT * from states WHERE states.name LIKE BINARY '{}'"
                .format(sys.argv[4]))
     states = cr.fetchall()
     for state in states:
