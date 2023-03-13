@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+'''Module that list states in orm'''
 from model_state import Base, State
 import sys
 from sqlalchemy import (create_engine)
