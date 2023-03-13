@@ -1,4 +1,4 @@
-#!/usrbin/python3
+#!/usr/bin/python3
 '''Module that creates state class'''
 from sqlalchemy import create_engine, Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
