@@ -1,20 +1,27 @@
 #!/usr/bin/node
-import { argv } from 'node:process';
+// import { argv } from 'node:process';
 
-let count = 0;
+// let count = 0;
 
-for (let i = 0; argv[i] != null; i++) {
-  count++;
-}
+// for (let i = 0; argv[i] != null; i++) {
+//   count++;
+// }
 
-let i = 2;
-while (i <= count) {
-  if (i + 1 > count) {
-    console.log('No argument');
-    break;
-  } else {
-    console.log(argv[i]);
-    i += 1;
-    break;
-  }
+// let i = 2;
+// while (i <= count) {
+//   if (i + 1 > count) {
+//     console.log('No argument');
+//     break;
+//   } else {
+//     console.log(argv[i]);
+//     i += 1;
+//     break;
+//   }
+// }
+
+const arg = process.argv[2];
+if (arg === undefined) {
+  console.log('No argument');
+} else {
+  console.log(arg);
 }
