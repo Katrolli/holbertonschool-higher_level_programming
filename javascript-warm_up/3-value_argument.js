@@ -7,11 +7,8 @@ for (let i = 0; argv[i] != null; i++) {
   count++;
 }
 
-let i = 0;
-while (i < count) {
-  if (i === 0) {
-    i += 2;
-  }
+let i = 2;
+while (i <= count) {
   if (i + 1 > count) {
     console.log('No argument');
     break;
