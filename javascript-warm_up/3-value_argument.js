@@ -9,7 +9,9 @@ for (let i = 0; argv[i] != null; i++) {
 
 let i = 0;
 while (i < count) {
-  i += 2;
+  if (i === 0) {
+    i += 2;
+  }
   if (i + 1 > count) {
     console.log('No argument');
     break;
