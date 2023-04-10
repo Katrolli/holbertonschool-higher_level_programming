@@ -11,8 +11,7 @@ let i = 0;
 while (i < count) {
   if (i === 0) {
     i += 2;
-  }
-  if (i + 1 > count) {
+  } else if (i + 1 > count) {
     console.log('No argument');
     break;
   } else {
