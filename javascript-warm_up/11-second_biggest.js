@@ -4,7 +4,7 @@ import { argv } from 'node:process';
 if (argv.length === 2 || argv.length === 3) {
   console.log(0);
 }
-function find_big(array) {
+function find_big (array) {
   let nr = 0;
   let i = 2;
   while (array[i] != null) {
