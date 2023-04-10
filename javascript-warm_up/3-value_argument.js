@@ -18,5 +18,6 @@ while (i < count) {
   } else {
     console.log(argv[i]);
     i += 1;
+    break;
   }
 }
