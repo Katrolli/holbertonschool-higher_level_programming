@@ -13,7 +13,6 @@ function getMovies (call) {
       console.log(`${films.length}`);
     });
   });
-  clear;
 }
 
 getMovies(apiCall);
