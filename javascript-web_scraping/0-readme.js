@@ -1,16 +1,13 @@
 #!/usr/bin/node
 
-const fileToRead = process.argv[2];
+const fileToRead = String(process.argv[2]);
 
-const fs = require('fs').promises;
+const fs = require('fs');
 
-async function readFile(filepath) {
-  try {
-    const data = await fs.readFile(filepath, 'utf-8');
-    console.log(data.toString());
-  } catch (error) {
+fs.readFile(fileToRead, 'utf-8', (data, error) => {
+  if (error) {
     console.log(error);
+    return;
   }
-}
-
-readFile(fileToRead);
+  console.log(data);
+});
