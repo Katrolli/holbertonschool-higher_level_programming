@@ -9,5 +9,9 @@ fs.readFile(fileToRead, 'utf-8', (data, error) => {
     console.log(error);
     return;
   }
+  if (data === null) {
+    console.log();
+    return;
+  }
   console.log(data);
 });
