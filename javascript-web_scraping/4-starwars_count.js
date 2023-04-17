@@ -30,9 +30,11 @@ request.get(apiCall, function (error, response, body) {
     console.log('error', err);
   } else {
     const data = JSON.parse(body).results;
+
     let count = 0;
+
     for (const info of data) {
-      for (const chars in info.characters) {
+      for (const chars of info.characters) {
         if (chars.includes('18')) {
           count++;
         }
