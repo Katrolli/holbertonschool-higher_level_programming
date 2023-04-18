@@ -17,8 +17,12 @@ request.get(apiCall, function (error, response, body) {
     isComplete = data.filter(
       (todo) => todo.userId === elem.userId && todo.completed
     ).length;
-
-    obj[elem.userId] = isComplete;
+    if (isComplete === 0) {
+      console.log(obj);
+      return;
+    } else {
+      obj[elem.userId] = isComplete;
+    }
   }
   console.log(obj);
 });
