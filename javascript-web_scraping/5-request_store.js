@@ -13,7 +13,6 @@ request.get(apiCall, function (error, response, body) {
     fs.writeFile(fileToWrite, body, 'utf-8', (error) => {
       if (error) {
         console.log(error);
-        return;
       }
     });
   }
